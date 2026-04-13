@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Reflection;
 
-// 1. Custom Attribute
 class Runnable : Attribute
 {
 }
-
-// 2. Class with methods
 class MyTasks
 {
     [Runnable]
@@ -27,7 +24,6 @@ class MyTasks
     }
 }
 
-// 3. Main
 class Program
 {
     static void Main()
