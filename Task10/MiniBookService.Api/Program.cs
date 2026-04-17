@@ -33,13 +33,12 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-SeedSampleBooks(app);
-
+SeedSampleBooks(app); //testing for 
 app.Run();
 
 static void SeedSampleBooks(WebApplication app)
 {
-    using var scope = app.Services.CreateScope();
+    using var scope = app.Services.CreateScope();  //temp container
 
     var database = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
@@ -65,3 +64,6 @@ static void SeedSampleBooks(WebApplication app)
 
     database.SaveChanges();
 }
+
+//builder.Services	app
+//register	execute

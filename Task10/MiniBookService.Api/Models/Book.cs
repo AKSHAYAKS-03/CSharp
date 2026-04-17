@@ -15,3 +15,5 @@ public class Book
     [Range(0, 10000)]
     public decimal Price { get; set; }
 }
+
+

@@ -1,11 +1,16 @@
 using System.Net;
 using System.Text.Json;
 
+//Error code + JSON response
+
+
 namespace MiniBookService.Api.Middleware;
 
 public class ExceptionHandlingMiddleware
 {
     private readonly RequestDelegate _next;
+    // calls next middleware / next step
+
     private readonly ILogger<ExceptionHandlingMiddleware> _logger;
 
     public ExceptionHandlingMiddleware(
@@ -21,6 +26,7 @@ public class ExceptionHandlingMiddleware
         try
         {
             await _next(context);
+            //requests goes to next step
         }
         catch (Exception exception)
         {

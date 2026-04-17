@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+// DB operations
 using MiniBookService.Api.Data;
+// AppDbContext
 using MiniBookService.Api.Models;
 
 namespace MiniBookService.Api.Services;
@@ -14,7 +16,9 @@ public class BookService : IBookService
         _database = database;
         _logger = logger;
     }
-
+    //class var = '_'
+   // param/loc var = 'normal'
+   
     public async Task<List<Book>> GetAllBooksAsync()
     {
         _logger.LogInformation("Getting all books");
